@@ -33,6 +33,11 @@ export const galleryPage = defineType({
             validation: Rule => Rule.required(),
         }),
         defineField({
+            name: 'thumbnail',
+            type: 'imageWithMeta',
+            title: 'Thumbanil'
+        }),
+        defineField({
             name: 'date',
             type: 'date',
             title: 'Date'
