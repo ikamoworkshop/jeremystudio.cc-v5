@@ -2,7 +2,7 @@ import {defineField, defineType} from 'sanity'
 import { isSlugUniqueInFolder } from '../hepler/isSlugUniqueInFolder'
 import { slices } from './slices'
 
-export default defineType({
+export const page = defineType({
     name: 'page',
     type: 'document',
     title: 'Page',

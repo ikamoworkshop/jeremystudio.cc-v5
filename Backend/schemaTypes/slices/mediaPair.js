@@ -1,11 +1,11 @@
 import {defineField, defineType} from 'sanity'
-import {ImagesIcon} from '@sanity/icons'
+import {PanelLeftIcon} from '@sanity/icons'
 
 export const mediaPair = defineType({
     name: 'mediaPair',
     type: 'object', 
     title: 'Media Pair',
-    icon: ImagesIcon,
+    icon: PanelLeftIcon,
     fields: [
         defineField({
             name: 'caption',
@@ -15,7 +15,7 @@ export const mediaPair = defineType({
         }),
         defineField({
             name: 'image',
-            type: 'image',
+            type: 'imageWithMeta',
             title: 'Image'
         })
     ], 
@@ -27,7 +27,7 @@ export const mediaPair = defineType({
             return {
                 title: title,
                 subtitle: 'Media Pair',
-                media: ImagesIcon
+                media: PanelLeftIcon
             }
         }
     },

@@ -1,10 +1,12 @@
-import blockContent from './blockContent'
-import page from './page'
+import richText from './richText'
+import { page } from './page'
 import { meta } from './meta'
+import { imageWithMeta } from './imageWithMeta'
 
 export const schemaTypes = [
     page,
-    meta
+    meta,
+    imageWithMeta
 ]
 
-schemaTypes.push(blockContent)
+schemaTypes.push(richText)
