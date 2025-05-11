@@ -1,11 +1,10 @@
 import {defineField, defineType} from 'sanity'
 import { isSlugUniqueInFolder } from '../hepler/isSlugUniqueInFolder'
-import { slices } from './slices'
 
-export const page = defineType({
-    name: 'page',
+export const galleryPage = defineType({
+    name: 'galleryPage',
     type: 'document',
-    title: 'Page',
+    title: 'Gallery Page',
     fields: [
         defineField({
             title: 'Page Meta Tags',
@@ -34,13 +33,19 @@ export const page = defineType({
             validation: Rule => Rule.required(),
         }),
         defineField({
-            name: 'slices',
+            name: 'date',
+            type: 'date',
+            title: 'Date'
+        }),
+        defineField({
+            name: 'photoList',
             type: 'array',
-            title: 'Content Slices',
-            of: slices,
-            options: {
-                sliceSelector: true
-            }
+            title: 'Photo List',
+            of: [
+                {
+                    type: 'imageWithMeta'
+                }
+            ],
         })
     ],
     preview: {

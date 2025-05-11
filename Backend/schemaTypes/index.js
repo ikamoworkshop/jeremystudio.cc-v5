@@ -1,10 +1,12 @@
 import richText from './richText'
-import { page } from './page'
+import { projectPage } from './projectPage'
+import { galleryPage } from './galleryPage'
 import { meta } from './meta'
 import { imageWithMeta } from './imageWithMeta'
 
 export const schemaTypes = [
-    page,
+    projectPage,
+    galleryPage,
     meta,
     imageWithMeta
 ]
